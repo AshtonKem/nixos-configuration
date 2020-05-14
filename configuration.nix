@@ -52,8 +52,6 @@
     gparted
     i3-gaps
     i3lock
-    openjdk
-    jre
     i3status
     killall
     lightdm
@@ -66,7 +64,6 @@
     polybarFull
     rofi
     niv
-    rustup
     sakura
     source-code-pro ## Font
     xfce.thunar
@@ -102,7 +99,6 @@
   nixpkgs.config.pulseaudio = true;
 
 
-  # Necessary for Dropbox
   nixpkgs.config.allowUnfree = true;
   # Enable U2F
   hardware.u2f.enable = true;
