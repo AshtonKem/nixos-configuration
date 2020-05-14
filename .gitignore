@@ -1,6 +1,7 @@
 ## Ignore machine specific or sensitive files
 backup.nix
 hardware-configuration.nix
+location.nix
 
 ## Ignore runtime files
 result

@@ -9,6 +9,7 @@
     [
       ./backup.nix
       ./boot.nix
+      ./location.nix
       ./xserver.nix
       ./hardware-configuration.nix
     ];
@@ -17,10 +18,6 @@
   networking.networkmanager.enable = true;
   networking.hostName = "nixos"; # Define your hostname.
   services.openssh.enable = true;
-
-  location.latitude = ***REMOVED***;
-  location.longitude = ***REMOVED***;
-  location.provider = "manual";
   services.redshift.enable = true;
 
 
