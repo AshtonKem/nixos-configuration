@@ -8,19 +8,13 @@
   imports =
     [
       ./backup.nix
+      ./boot.nix
       ./xserver.nix
       ./hardware-configuration.nix
     ];
 
-  # Use the GRUB 2 boot loader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.version = 2;
-  boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
-  boot.loader.grub.useOSProber = true;
-  boot.extraModulePackages = [ config.boot.kernelPackages.broadcom_sta ];
-  boot.initrd.kernelModules = [ "wl" ];
 
-    networking.networkmanager.enable = true;
+  networking.networkmanager.enable = true;
   networking.hostName = "nixos"; # Define your hostname.
   services.openssh.enable = true;
 
