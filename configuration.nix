@@ -76,13 +76,6 @@
     rustup
     sakura
     source-code-pro ## Font
-    (pkgs.texlive.combine {
-     inherit (pkgs.texlive) scheme-basic extsizes fontawesome koma-script
-              ms xcolor pgf tcolorbox environ trimspaces
-              etoolbox enumitem dashrule ifmtarg multirow latexmk
-              changepage biblatex logreq xstring metafont
-              collection-fontsrecommended lato fontaxes xkeyval parskip fp;
-    })
     xfce.thunar
     xdotool
     xorg.xev
