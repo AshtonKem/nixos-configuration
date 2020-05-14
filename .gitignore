@@ -3,4 +3,4 @@ backup.nix
 hardware-configuration.nix
 
 ## Ignore runtime files
-result/
+result
