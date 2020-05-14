@@ -62,7 +62,6 @@
     jre
     i3status
     killall
-    libreoffice
     lightdm
     nerdfonts
     nitrogen
