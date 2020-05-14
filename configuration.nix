@@ -20,12 +20,7 @@
   boot.extraModulePackages = [ config.boot.kernelPackages.broadcom_sta ];
   boot.initrd.kernelModules = [ "wl" ];
 
-  fileSystems."/mnt/ubuntu" = {
-    device = "/dev/disk/by-uuid/c6f915f1-2856-4f81-8cb1-df5d123c890a" ;
-    fsType = "ext4";
-  };
-
-  networking.networkmanager.enable = true;
+    networking.networkmanager.enable = true;
   networking.hostName = "nixos"; # Define your hostname.
   services.openssh.enable = true;
 
