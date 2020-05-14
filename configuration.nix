@@ -9,7 +9,7 @@
     [
       ./backup.nix
       ./boot.nix
-      ./location.nix
+      ./secrets.nix
       ./xserver.nix
       ./hardware-configuration.nix
     ];
