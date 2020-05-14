@@ -35,10 +35,6 @@
   services.redshift.enable = true;
 
 
-  # Steam support
-  hardware.opengl.driSupport32Bit = true;
-  hardware.pulseaudio.support32Bit = true;
-
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
   services.lorri.enable = true;
