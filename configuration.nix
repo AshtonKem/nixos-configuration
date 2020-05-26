@@ -18,7 +18,9 @@
   networking.networkmanager.enable = true;
   networking.hostName = "nixos"; # Define your hostname.
   services.openssh.enable = true;
+  services.sshd.enable = true;
   services.redshift.enable = true;
+  services.zookeeper.enable = true;
 
 
   # Set your time zone.
@@ -33,9 +35,11 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     audacity
+    blender
     gnome3.adwaita-icon-theme
     calibre
     chromium
+    cudatoolkit
     dmenu
     duplicity
     direnv
@@ -71,6 +75,7 @@
     wally-cli
     weechat
     wget
+    zoom-us
   ];
 
   fonts = {
@@ -99,6 +104,11 @@
   nixpkgs.config.allowUnfree = true;
   # Enable U2F
   hardware.u2f.enable = true;
+
+  systemd.services.nvidia-control-devices = {
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig.ExecStart = "${pkgs.linuxPackages.nvidia_x11.bin}/bin/nvidia-smi";
+  };
 
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database
