@@ -6,6 +6,6 @@
     enable = true;
     secretFile = "/etc/duplicity.d/credentials";
     include = ["/home/ashton/"];
-    exclude = ["/**" "/home/ashton/.*" "/home/ashton/Downloads"];
+    exclude = ["/**" "/home/ashton/.*/**" "/home/ashton/Downloads"];
   };
 }
