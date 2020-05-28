@@ -17,6 +17,8 @@
 
   networking.networkmanager.enable = true;
   networking.hostName = "nixos"; # Define your hostname.
+  services.openssh.permitRootLogin = "no";
+  services.openssh.passwordAuthentication = false;
   services.openssh.enable = true;
   services.sshd.enable = true;
   services.redshift.enable = true;
@@ -86,10 +88,12 @@
     ];
   };
 
+
   users.users.ashton = {
     isNormalUser = true;
     home = "/home/ashton";
     extraGroups = [ "wheel" "networkmanager" ];
+    openssh.authorizedKeys.keys = ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9cjqiHUAbkHv/hv3ncZwed9eojhZXTlY9X0ApGkamQgznLpg5IzIPa4dFwVRg9380dKDGoZqESc5tXkOklIJSO6UXJu8VV2SrbnQyZscs75bMtCjrQZFBo5zq48Ch5FafivVOoDGv+3AbpaL25ZNLmqLeCsX7NkrpSoh1DCtFcCEJTV/oVo5gLj77FcBip7O6TZymZP0DueS2x3akGR6qxadc7R+EZ+DmZb1WKd9z9FYRTR79b+b65FFs14ni4pH/OVpDvRxnEZUx6yJzHClKHLrw7Ehf2yJDZnXFAVnXujqHatWDHTd6IvniAanPLwNlUlYdwMK38yzQ7f0a+eP/ ashtonkemerling@Ashtons-Mac-mini.local"];
   };
 
   # Enable CUPS to print documents.
