@@ -106,8 +106,6 @@
 
 
   nixpkgs.config.allowUnfree = true;
-  # Enable U2F
-  hardware.u2f.enable = true;
 
   systemd.services.nvidia-control-devices = {
     wantedBy = [ "multi-user.target" ];
